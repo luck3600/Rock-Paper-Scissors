@@ -1,0 +1,41 @@
+YourScore = 0
+ComputerScore = 0
+while ComputerScore < 3 and YourScore < 3:
+print('Текущий счет - Игрок: ' + str(YourScore) + ' - Компьютер: ' + str(ComputerScore))
+you = input('Выбирайте камень: / ножницы / бумага')
+if you == 'камень' or you == 'ножницы' or you == 'бумага':
+`` comp = random.randint(1, 3)
+`` if comp == 1:
+`` `` comp = 'камень'
+`` elif comp == 2:
+`` `` comp = 'ножницы'
+`` else:
+`` `` comp = 'бумага'
+`` print('Камень, ножницы, бумага')
+`` time.sleep(1)
+`` print('1')
+`` time.sleep(1)
+`` print('2')
+`` time.sleep(1)
+`` print('3')
+`` time.sleep(1)
+`` print('Компьютер выбрал ' + comp)
+`` if comp == you:
+`` `` print('Ничья')
+`` elif you == 'камень' and comp == 'ножницы':
+`` `` print('Вы победили')
+`` `` YourScore = YourScore + 1
+`` elif you == 'бумага' and comp == 'камень':
+`` `` print('Вы победили')
+`` `` YourScore = YourScore + 1
+`` elif you == 'ножницы' and comp == 'бумага':
+`` `` print('Вы победили')
+`` `` YourScore = YourScore + 1
+`` else:
+`` `` print('Вы проиграли')
+`` `` ComputerScore = ComputerScore + 1
+else:
+`` print('Нет такого варианта')
+time.sleep(1)
+print('Игра закончилась')
+print('Итоговый счет - Игрок: ' + str(YourScore) + ' - Компьютер: ' + str(ComputerScore))
